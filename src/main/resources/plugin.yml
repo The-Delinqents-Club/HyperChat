@@ -1,0 +1,8 @@
+name: HyperChat
+version: '${project.version}'
+main: com.github.kingultron99.hyperchat.HyperChat
+api-version: 1.18
+load: STARTUP
+depend: [ PlaceholderAPI ]
+authors: [ kingultron99 ]
+description: A chat formating plugin built for The Delinquents Club
