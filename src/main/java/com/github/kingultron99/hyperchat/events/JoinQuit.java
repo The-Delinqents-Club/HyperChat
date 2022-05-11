@@ -3,7 +3,6 @@ package com.github.kingultron99.hyperchat.events;
 import me.clip.placeholderapi.PlaceholderAPI;
 import me.clip.placeholderapi.libs.kyori.adventure.text.format.NamedTextColor;
 import net.kyori.adventure.text.Component;
-import net.kyori.adventure.text.TextComponent;
 import net.kyori.adventure.text.event.ClickEvent;
 import net.kyori.adventure.text.event.HoverEvent;
 import net.kyori.adventure.text.format.TextColor;
@@ -15,7 +14,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 
-public class Events implements Listener {
+public class JoinQuit implements Listener {
         @EventHandler(priority = EventPriority.HIGHEST)
         public void onJoin(PlayerJoinEvent e) {
                 Player player = e.getPlayer();
