@@ -21,16 +21,16 @@ public class JoinQuit implements Listener {
                 player.playSound(player.getLocation(), Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 100F, 1F);
                 Component playerMessage;
 
-                if (player.hasPlayedBefore() == true) {
+                if (player.hasPlayedBefore()) {
                         playerMessage = Component.text("Welcome back ").color(TextColor.color(0x555555)).append(
-                                        Component.text(PlaceholderAPI.setBracketPlaceholders(player, "%player_name%"))
+                                        Component.text(PlaceholderAPI.setPlaceholders(player, "%player_name%"))
                                                         .color(TextColor.color(0xd8b4fe)))
                                         .append(Component.text("!\n").color(TextColor.color(0x555555)));
                 } else {
                         playerMessage = Component.text("Welcome to The Delinquents Club, ")
                                         .color(TextColor.color(0x555555))
                                         .append(Component
-                                                        .text(PlaceholderAPI.setBracketPlaceholders(player, "%player_name%"))
+                                                        .text(PlaceholderAPI.setPlaceholders(player, "%player_name%"))
                                                         .color(TextColor.color(0xd8b4fe)))
                                         .append(Component.text("!\n").color(TextColor.color(0x555555)))
                                         .append(Component.text("If you haven't already, come join our ")
