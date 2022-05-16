@@ -1,8 +1,9 @@
 package com.github.kingultron99.hyperchat;
 
-import java.util.ArrayList;
-import java.util.List;
-
+import com.github.kingultron99.hyperchat.util.Config;
+import com.github.kingultron99.hyperchat.util.Locales;
+import net.kyori.adventure.text.Component;
+import net.kyori.adventure.text.minimessage.MiniMessage;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -11,8 +12,8 @@ import org.bukkit.command.TabCompleter;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import net.kyori.adventure.text.Component;
-import net.kyori.adventure.text.minimessage.MiniMessage;
+import java.util.ArrayList;
+import java.util.List;
 
 public class CommandHandler implements CommandExecutor, TabCompleter {
 
@@ -51,8 +52,18 @@ public class CommandHandler implements CommandExecutor, TabCompleter {
                             .deserialize("<color:#EF4444>You dont have permission to clear the chat!</color>"));
                 }
                 return true;
+            } else if (args[0].equalsIgnoreCase("reload")) {
+                if (sender.hasPermission("hyperchat.reload")) {
+                    sender.sendMessage("Reloading!");
+                    Config.reload(true);
+                    Locales.reload(true);
+                } else {
+                    sender.sendMessage(MiniMessage.miniMessage()
+                            .deserialize("<color:#EF4444>You dont have permission to reload HyperChat!</color>"));
+                }
+                return true;
             } else {
-                sender.sendMessage(MiniMessage.miniMessage().deserialize("<color:#EF4444>Unkknown command!</color>"));
+                sender.sendMessage(MiniMessage.miniMessage().deserialize("<color:#EF4444>Unknown command!</color>"));
                 return true;
             }
         }
