@@ -49,7 +49,7 @@ public class CommandHandler implements CommandExecutor, TabCompleter {
                     }
                 } else {
                     sender.sendMessage(MiniMessage.miniMessage()
-                            .deserialize("<color:#EF4444>You dont have permission to clear the chat!</color>"));
+                            .deserialize(Locales.COMMAND_RESULT_NO_PERM.getString(HyperChat.getInstance().getServer().getPlayer(sender.getName())).replaceAll("%perm", "hyperchat.clear")));
                 }
                 return true;
             } else if (args[0].equalsIgnoreCase("reload")) {
@@ -59,7 +59,7 @@ public class CommandHandler implements CommandExecutor, TabCompleter {
                     Locales.reload(true);
                 } else {
                     sender.sendMessage(MiniMessage.miniMessage()
-                            .deserialize("<color:#EF4444>You dont have permission to reload HyperChat!</color>"));
+                            .deserialize(Locales.COMMAND_RESULT_NO_PERM.getString(HyperChat.getInstance().getServer().getPlayer(sender.getName())).replaceAll("%perm", "hyperchat.reload")));
                 }
                 return true;
             } else {

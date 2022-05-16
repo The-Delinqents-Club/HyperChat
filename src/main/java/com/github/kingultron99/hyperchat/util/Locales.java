@@ -16,10 +16,7 @@ public enum Locales {
     COMMAND_CLEAR_UNKNOWN("Commands.Clear.Unknown", "UNKNOWN"),
     MESSAGES_RELOAD("Messages.Commands.Reload.Success", "&aConfig was reloaded."),
     MESSAGES_CLEAR("Messages.Commands.Clear.Success", "&aThe chat has been cleared by "),
-    COMMAND_RESULT_NO_PERM("Messages.CommandResult.NoPermission", "&4[ERROR] &7You don't have permission for this! &c(%perm)"),
-    COMMAND_RESULT_WRONG_USAGE("Messages.CommandResult.WrongUsage", "&c[ERROR] &7Wrong usage! Please type &6%cmd help&7!"),
-    ANTI_SPAM_DENIED("Messages.AntiSpam.Denied", "&e[AntiSpam] &7You are not allowed to spam! Please wait another &e%time% &7seconds!"),
-    ;
+    COMMAND_RESULT_NO_PERM("Messages.CommandResult.NoPermission", "<color:#EF4444>[ERROR]</color> <color:#555555>&7You don't have permission for this!</color> <color:#EF4444>(%perm)</color>");
 
     private final String value;
     private final String path;
