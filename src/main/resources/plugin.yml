@@ -3,9 +3,11 @@ version: '${project.version}'
 main: com.github.kingultron99.hyperchat.HyperChat
 api-version: 1.18
 load: STARTUP
-depend: [ PlaceholderAPI ]
+depend:
+  - PlaceholderAPI
+  - LuckPerms
 authors: [ kingultron99 ]
-description: A chat formating plugin built for The Delinquents Club
+description: A chat formatting plugin built for The Delinquents Club
 commands:
   hyperchat:
       description: HyperChat plugin commands
@@ -16,4 +18,7 @@ permissions:
     default: true
   hyperchat.clear:
     description: Allows the clearing of chat
+    default: op
+  hyperchat.reload:
+    description: Reloads the hyperchat config and Locales
     default: op

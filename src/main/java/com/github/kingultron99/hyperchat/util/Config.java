@@ -6,11 +6,13 @@ import org.bukkit.configuration.file.YamlConfiguration;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
 public enum Config {
-    LOCALE("Locale", "en-EN", "Currently Only support en-EN");
+    LOCALE("Locale", "en-EN", "Currently Only support en-EN"),
+    ROLES("Roles", Arrays.asList("'<gradient:#D8B4FE:#9333EA>Owner</gradient>'", "'<gradient:#5EB1BF:#0B4F6C>Trusted</gradient>'"),"A list of all roles on the server");
     private final Object value;
     private final String path;
     private final String description;
